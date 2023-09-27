@@ -1,0 +1,32 @@
+
+# There are two address families:
+1. IPv4 (32-bit) = AF_INET
+2. IPv6 (128-bit) = AF_INET6
+
+# Port 1 - 65535 (2 octets or 16 bits)
+
+# struct sockaddr:
+1. struct sockaddr_in (IPv4).
+2. struct sockaddr_in6 (IPv6).
+
+# Functions:
+1. htons() - host to network short.
+2. ntohs() - network to host short.
+3. inet_pton() - (presentation to network) string to binary.
+4. inet_ntop() - (network to presentation) binary to string.
+
+# Functions for server:
+1. socket() - To create socket.
+2. bind()   - To bind socket to an address and port.
+3. listen() - To listen for incoming connections.
+4. accept() - To accept a connection.
+5. recv()   - To receive data from a client.
+6. send()   - To send data to a client.
+7. close()  - To close a socket.
+
+# Functions for client:
+1. socket()  - To create socket.
+2. connect() - To connect to a server.
+3. send()    - To send data to a server.
+4. recv()    - To receive data from a server.
+5. close()   - To close a socket.
