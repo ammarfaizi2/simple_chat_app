@@ -33,6 +33,7 @@ static int create_socket_and_connect(void)
 	addr.sin_family = AF_INET;
 	if (inet_pton(AF_INET, server_addr, &addr.sin_addr) != 1) {
 		printf("Invalid server address: %s\n", server_addr);
+		close(fd);
 		return -1;
 	}
 	addr.sin_port = htons(server_port);

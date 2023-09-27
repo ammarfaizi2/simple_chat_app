@@ -32,6 +32,7 @@ static int create_socket(void)
 	addr.sin_family = AF_INET;
 	if (inet_pton(AF_INET, bind_addr, &addr.sin_addr) != 1) {
 		printf("Invalid bind address: %s\n", bind_addr);
+		close(fd);
 		return -1;
 	}
 	addr.sin_port = htons(bind_port);
